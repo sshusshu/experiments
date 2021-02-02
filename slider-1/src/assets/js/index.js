@@ -7,6 +7,7 @@ let moveX = 0;
 let tX = 0;
 let idx = 0;
 let isDrag = false;
+const ex = undefined;
 function getPosition(e) {
   let x, y;
 
