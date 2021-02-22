@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--<canvas></canvas>-->
+
+<svg class="filterbg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+</svg>
+
+<svg class="waterbg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs class="deco"></defs>
+    <path class="water" d="M0,0 Q100,100 200,0" fill="none"></path>
+</svg>
+
+
+
+<script src="assets/js/basic.js"></script>
+</body>
+</html>
