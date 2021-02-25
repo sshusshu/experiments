@@ -1,0 +1,36 @@
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 10em;
+        color:#f9f9f9;
+    }
+    &#idea{
+        p{
+            cursor: pointer;
+            span{
+                display: inline-block;
+                transition: transform 0.5s ease-in-out;
+            }
+            &:hover{
+                span{
+                    transform: rotate(540deg) skewY(20deg);
+                }
+            }
+        }
+    }
+}
+
