@@ -1,1 +1,10 @@
-canvas{border:1px solid #eee ;}
+
+body{
+    margin: 0;
+    padding: 0;
+   // overflow: hidden;
+}
+
+canvas{
+    border:1px solid #eee;
+}
