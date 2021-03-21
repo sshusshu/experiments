@@ -2,9 +2,25 @@
 body{
     margin: 0;
     padding: 0;
+    line-height: 0;
    // overflow: hidden;
 }
 
 canvas{
     border:1px solid #eee;
+}
+
+br {
+    display: block;
+    margin: 0;
+}
+
+
+div{
+    display: inline-block;
+    width: 8px;
+    height:4px;
+    border-radius:2px;
+    transition:transform 0.3s ease;
+    transform-origin: top left;
 }
