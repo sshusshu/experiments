@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     line-height: 0;
-   // overflow: hidden;
+    overflow: hidden;
 }
 
 canvas{
@@ -18,7 +18,7 @@ br {
 
 div{
     display: inline-block;
-    width: 8px;
+    width: 16px;
     height:4px;
     border-radius:2px;
     transition:transform 0.3s ease;
