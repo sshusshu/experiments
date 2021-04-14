@@ -21,7 +21,7 @@ body {
   }
   .scroll-sequence__content {
     .speak {
-       height:100vh;
+      height: 100vh;
       &[data-scroll] {
         // transition: opacity .3s;
         transform: translatey(calc(var(--viewport-y) * 30vh));
@@ -30,5 +30,3 @@ body {
     }
   }
 }
-
-
