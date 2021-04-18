@@ -10,10 +10,11 @@ const end = section.querySelector("h1");
 const controller = new ScrollMagic.Controller();
 
 //Scenes
-let scene = new ScrollMagic.Scene({ // 섹션마다 씬이있음.. 애니메이팅 되는 부분
+let scene = new ScrollMagic.Scene({
+  // 섹션마다 씬이있음.. 애니메이팅 되는 부분
   duration: 9000,
   triggerElement: intro,
-  triggerHook: 0
+  triggerHook: 0,
 })
   .addIndicators()
   .setPin(intro)
@@ -25,7 +26,7 @@ const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
 let scene2 = new ScrollMagic.Scene({
   duration: 3000,
   triggerElement: intro,
-  triggerHook: 0
+  triggerHook: 0,
 })
   .setTween(textAnim)
   .addTo(controller);
@@ -35,7 +36,7 @@ let accelamount = 0.1;
 let scrollpos = 0;
 let delay = 0;
 
-scene.on("update", e => {
+scene.on("update", (e) => {
   scrollpos = e.scrollPos / 1000;
 });
 
