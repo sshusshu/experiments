@@ -10,9 +10,9 @@
   font-size: 200px;
   font-weight: bold;
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
   top: 0;
   left: 70px;
   margin: 0;
@@ -24,8 +24,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 4000px;
 }
 
@@ -49,7 +49,7 @@ section {
   position: -webkit-sticky;
   position: sticky;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   width: 300px;
   margin: 10px;
   overflow: hidden;
