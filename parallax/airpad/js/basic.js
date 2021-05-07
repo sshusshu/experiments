@@ -1,5 +1,5 @@
 const appleSequenceImages = [];
-
+const ex = undefined;
 for (let i = 0; i <= 60; i++) {
   appleSequenceImages.push(`${`000${i}`.slice(-3)}.png`);
 }
