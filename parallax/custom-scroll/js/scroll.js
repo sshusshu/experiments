@@ -4,6 +4,7 @@ let request;
 let tmpY = 0,
   accel = 0.97;
 let totalY = 0;
+const ex = undefined;
 
 console.dir(moveTarget);
 
