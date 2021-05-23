@@ -8,6 +8,7 @@ let mouse = {
   x: 0,
   y: 0,
 };
+
 //helper
 function getDist(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
@@ -70,43 +71,6 @@ class mouseBall extends Ball {
     }
   }
 }
-
-// class mixBall extends Ball {
-//     update() {
-//         if (colorChange){
-//             //맞닿는 부분 X,Y 구하기
-//             if(ball_1.x > ball_2.x){
-//                 touchX = ball_2.x+(Math.abs(ball_1.x-ball_2.x)/2);
-//             }else if(ball_1.x < ball_2.x){
-//                 touchX = ball_2.x-(Math.abs(ball_1.x-ball_2.x)/2);
-//             }else{
-//                 touchX = ball_2.x;
-//             }
-//
-//             if(ball_1.y>ball_2.y){
-//                 touchY = ball_2.y+(Math.abs(ball_1.y-ball_2.y)/2);
-//             }else if(ball_1.y<ball_2.y){
-//                 touchY = ball_2.y-(Math.abs(ball_1.y-ball_2.y)/2);
-//             }else{
-//                 touchY = ball_2.y;
-//             }
-//
-//             this.x = touchX;
-//             this.y = touchY;
-//
-//
-//             if (this.radius < ballRadius){
-//                 this.radius += 0.7;
-//             }
-//
-//         }else{
-//             if(this.radius>0.7){
-//                 this.radius -= 0.7;
-//             }
-//         }
-//         this.draw()
-//     }
-// }
 
 const ball_1 = new mouseBall(
   0,
