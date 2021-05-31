@@ -5,7 +5,6 @@ let tmpY = 0,
   accel = 0.96;
 let totalY = 0;
 let txtScale = 1;
-const ex = undefined;
 
 const imgTranslateArr = document.querySelectorAll(
   'img[data-animation="translate"]'
