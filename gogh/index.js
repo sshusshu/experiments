@@ -4,7 +4,6 @@ const body = document.querySelector("body");
 
 const canvas2 = document.querySelector("#manipulated");
 const ctx2 = canvas2.getContext("2d");
-const ex = undefined;
 
 const img = new Image();
 img.src = "./images/starry_night.jpg";
