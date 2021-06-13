@@ -8,7 +8,6 @@ var swipeUtil = (function ($) {
     checkScroll: function () {},
     touchEnd: function () {},
   };
-  const ex = undefined;
   var swipeUtil = function (spec) {
     var that = {};
     that.settings = $.extend({}, defaults, spec);
