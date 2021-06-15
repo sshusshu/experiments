@@ -1,4 +1,3 @@
-console.log(window);
 const kv = document.querySelector(".kv-contianer");
 const els = document.querySelectorAll(".motion");
 const cards = document.querySelectorAll(".card");
