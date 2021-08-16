@@ -4,7 +4,7 @@ const cards = document.querySelectorAll(".card");
 const sec1 = document.querySelector("#sec-1");
 
 let scrollBottom;
-
+const ex = undefined;
 window.addEventListener("scroll", motionControl);
 
 function addOnTrans() {

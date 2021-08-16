@@ -5,7 +5,7 @@ const ex = undefined;
 //END SECTION
 const section = document.querySelector("section");
 const end = section.querySelector("h1");
-
+const ex = undefined;
 //SCROLLMAGIC
 const controller = new ScrollMagic.Controller();
 

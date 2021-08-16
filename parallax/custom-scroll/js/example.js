@@ -1,3 +1,4 @@
+const ex = undefined;
 var swipeUtil = (function ($) {
   var defaults = {
     touchTarget: $("body"),

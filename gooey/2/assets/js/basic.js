@@ -1,7 +1,7 @@
 const water = document.querySelector(".water");
 const body = document.querySelector("body");
 const deco = document.querySelector(".deco");
-
+const ex = undefined;
 water.setAttribute(
   "d",
   `M0,0 Q${body.offsetWidth / 2},${body.offsetHeight / 5} ${body.offsetWidth},0`

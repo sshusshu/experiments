@@ -2,6 +2,7 @@ const appleSequenceImages = [];
 for (let i = 0; i <= 60; i++) {
   appleSequenceImages.push(`${`000${i}`.slice(-3)}.png`);
 }
+const ex = undefined;
 
 const requestAnimationFrame =
   window.requestAnimationFrame ||

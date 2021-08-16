@@ -1,7 +1,7 @@
 const canvas = document.querySelector("#image");
 const ctx = canvas.getContext("2d");
 const body = document.querySelector("body");
-
+const ex = undefined;
 const canvas2 = document.querySelector("#manipulated");
 const ctx2 = canvas2.getContext("2d");
 
