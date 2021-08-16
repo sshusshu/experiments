@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>margin</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+    <ul>
+        <li>
+            <img src="./img/test.png" alt="">
+            <h1>1</h1>
+        </li>
+        <li>
+            <img src="./img/test.png" alt="">
+            <h1>2</h1>
+        </li>
+        <li>
+            <img src="./img/test.png" alt="">
+            <h1>3</h1>
+        </li>
+        <li>
+            <img src="./img/test.png" alt="">
+            <h1>4</h1>
+        </li>
+        <li>
+            <img src="./img/test.png" alt="">
+            <h1>5</h1>
+        </li>
+    </ul>
+</div>
+<script>
+
+
+    const widthStandard = 70;
+    const marginStandard = 30;
+    const slideWrap = document.querySelector('.slide-container');
+    const container = slideWrap.querySelector('ul');
+    const slides = container.querySelectorAll('li');
+
+
+    /********************************* Image size *************************************/
+
+
+    container.style.width = (slides.length *  widthStandard)+'%';
+    container.style.marginLeft =  marginStandard/2 +'%';
+    slides.forEach((slide)=>{
+        slide.style.width = (widthStandard/slides.length)+'%';
+        slide.style.margin = '0 ' + (marginStandard/(slides.length*2))+'%';
+    })
+
+
+    /********************************* Variable *************************************/
+
+    let startX = 0;
+    let downX = 0;
+    let currentX = 0;
+    let idx = 0;
+    let moveX=0;
+    let isDrag = false;
+    const slideWidth = container.offsetWidth/slides.length
+
+    /********************************* Function *************************************/
+
+    function mouseDownHandler(e){
+        e.preventDefault();
+        downX = e.clientX;
+        startX = currentX + e.clientX;
+        slideWrap.addEventListener('mousemove', mouseMoveHandler)
+        slideWrap.addEventListener('touchmove', mouseMoveHandler);
+    }
+    function mouseMoveHandler(e){
+        isDrag = true;
+        moveX = downX - e.clientX;
+        currentX= startX - e.clientX;
+        setX(e)
+    }
+    function mouseUpHandler(e){
+        isDrag = false;
+        if (moveX>0){
+            idx = Math.ceil(currentX/slideWidth);
+        }else{
+            idx = Math.floor(currentX/slideWidth);
+        }
+        currentX = slideWidth * idx
+        setX(e)
+        slideWrap.removeEventListener('mousemove', mouseMoveHandler)
+        slideWrap.removeEventListener('touchmove', mouseMoveHandler);
+    }
+    function mouseLeaveHandler(e){
+        slideWrap.removeEventListener('mousemove', mouseMoveHandler)
+        slideWrap.removeEventListener('touchmove', mouseMoveHandler);
+    }
+
+    function setX(e){
+        //currentX = startX - e.clientX;
+        if(currentX < 0){currentX = 0;}
+        if(currentX > container.offsetWidth-innerWidth){
+            currentX = container.offsetWidth-innerWidth + (innerWidth/4);
+        }
+        if(!isDrag){
+            container.style.transition = 'transform 0.5s ease-out'
+        }else{
+            container.style.transition = 'transform 0.0s ease-out'
+        }
+        container.style.transform = `translate3d(${-currentX}px,0px,0px)`
+    }
+
+    // function getPosition(e) {
+    //     let x,y;
+    //
+    //     if (e.type.includes('touch')) {
+    //         x = e.touches[0].clientX;
+    //         y = e.touches[0].clientY;
+    //     } else {
+    //         x = e.clientX;
+    //         y = e.clientY;
+    //     }
+    //
+    //     return {x:x, y:y};
+    // }
+    /********************************* Event Listener *************************************/
+
+    slideWrap.addEventListener('mousedown', mouseDownHandler)
+    slideWrap.addEventListener('touchstart', mouseDownHandler);
+
+    slideWrap.addEventListener('mouseup', mouseUpHandler)
+    slideWrap.addEventListener('touchend', mouseUpHandler);
+
+    slideWrap.addEventListener('mouseleave', mouseLeaveHandler)
+    slideWrap.addEventListener('touchcancel', mouseLeaveHandler);
+
+
+</script>
+</body>
+</html>
