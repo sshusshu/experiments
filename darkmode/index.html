@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    p{
+        width: 600px;
+    }
+    @media(prefers-color-scheme : dark){
+        .container{
+            background: #000;
+            color: #fff;
+        }
+        .dark{
+            background: #000;
+            color: #fff; 
+        }
+        .light{
+            background: #fff;
+            color: #000;  
+        }
+    }
+    @media(prefers-color-scheme : light){
+        .container{
+            background: #fff;
+            color: #000;
+        }
+        .dark{
+            background: #000;
+            color: #fff; 
+        }
+        .light{
+            background: #fff;
+            color: #000;  
+        }
+    }
+ 
+
+</style>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="dark-wrap">
+                <label for="darkmode">dark mode</label>
+                <input type="checkbox" id="darkmode">
+            </div>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Rem vero eaque temporibus quos consequuntur nemo pariatur
+                laudantium veniam deleniti tempore sequi numquam suscipit
+                cumque, ab alias incidunt sapiente sunt similique!
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    const container = document.querySelector('.container');
+    const darkbtn = document.querySelector('.dark-wrap input');
+    darkbtn.addEventListener('click',(e)=>{
+        const theme = window.matchMedia('(prefers-color-scheme:dark)').matches;
+        if(e.target.checked && theme){
+            container.classList.remove('light')
+            container.classList.add('dark')
+        }else if(!e.target.checked && theme){
+            container.classList.remove('dark')
+            container.classList.add('light')
+        }
+    })
+</script>
+</html>
